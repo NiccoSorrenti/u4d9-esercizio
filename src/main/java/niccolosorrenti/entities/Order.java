@@ -20,9 +20,10 @@ public class Order {
         this.customer = customer;
     }
 
-//    public static int calculateTotal() {
-//
-//    }
+    public double calculateTotal() {
+        return products.stream()
+                .mapToDouble(product -> product.getPrice()).sum();
+    }
 
     public List<Product> getProducts() {
         return products;
