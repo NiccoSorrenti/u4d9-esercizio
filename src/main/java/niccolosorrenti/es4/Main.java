@@ -35,7 +35,7 @@ public class Main {
         orders.add(order1);
         orders.add(order2);
 
-        double avg = orders.stream().collect(Collectors.averagingDouble(order -> (int) order.calculateTotal()));
+        double avg = orders.stream().collect(Collectors.averagingDouble(order -> order.calculateTotal()));
         System.out.println("La media dei prezzi è: " + avg);
     }
 }
